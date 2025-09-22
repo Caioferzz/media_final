@@ -15,6 +15,7 @@ public class Media_final {
 
     public void receberDados(){
         Scanner leitor = new Scanner(System.in);
+        System.out.println("******CÁCULO DA MÉDIA ESCOLAR ******");
         System.out.println("-------------------------------------------------------------");
         System.out.print("Digite o nome do Aluno:");
         nomeDoAluno = leitor.nextLine();
