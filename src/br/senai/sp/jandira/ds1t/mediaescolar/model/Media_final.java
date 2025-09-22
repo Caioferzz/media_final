@@ -44,12 +44,16 @@ public class Media_final {
     public void determinarSituacao(){
             if (mediaFinal >= 5.0) {
                 aprovadoXreprovado = "Aprovado(a)";
-            } else {
-                aprovadoXreprovado = "Reprovado(a)";
-            }
 
+            } else if (mediaFinal <= 3.0){
+                aprovadoXreprovado = "Reprovado(a)";
+
+            }
+            else {
+                aprovadoXreprovado = "Recuperação";
+            }
             exibirResultados();
-        }
+    }
 
     public void exibirResultados(){
         System.out.println("Média do aluno(a): " + mediaFinal );
