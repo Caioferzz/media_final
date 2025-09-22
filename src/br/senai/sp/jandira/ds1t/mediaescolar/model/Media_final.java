@@ -34,18 +34,23 @@ public class Media_final {
 
         calcularMedia();
     }
-    public void calcularMedia(){
+    public void calcularMedia() {
         SomatoriaNotas = nota1 + nota2 + nota3 + nota4;
-        mediaFinal = SomatoriaNotas/ 4;
+        mediaFinal = SomatoriaNotas / 4;
 
-        if ( mediaFinal > 5){
-            aprovadoXreprovado = "Aprovado(a)";
-        } else {
-            aprovadoXreprovado = "Reprovado(a)";
+        determinarSituacao();
+    }
+
+    public void determinarSituacao(){
+            if (mediaFinal >= 5.0) {
+                aprovadoXreprovado = "Aprovado(a)";
+            } else {
+                aprovadoXreprovado = "Reprovado(a)";
+            }
+
+            exibirResultados();
         }
 
-        exibirResultados();
-    }
     public void exibirResultados(){
         System.out.println("Média do aluno(a): " + mediaFinal );
         System.out.println("O(a) aluno(a) " + nomeDoAluno + " está " + aprovadoXreprovado + "!");
